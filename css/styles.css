@@ -42,7 +42,6 @@ ul {
 .nav {
     width: 200px;
     height: calc(100% - 100px);
-    padding: 20px 20px 0;
     display: flex;
     flex-direction: column;
 
@@ -54,6 +53,7 @@ ul {
 }
 
 .main-logo {
+    padding: 10px;
     /* debug */
     border: 1px dashed black;
 }
@@ -71,10 +71,12 @@ ul {
     display: flex;
     align-items: center;
     gap: 5px;
-    padding-bottom: 10px;
+    padding: 10px 0;
+    vertical-align: middle;
 }
 
 .playlists {
+    padding: 10px;
     
     /* debug */
     border: 1px dashed black;   
@@ -144,6 +146,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-wrap: wrap;
     gap: 25px;
     padding: 20px;
     /* debug */
@@ -206,14 +209,132 @@ hr {
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+    align-items: center;
 
     /* debug */
     background-color: blueviolet;
     border: 1px dashed black;
 }
 
+.volume,
+.minature {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+
+        /* debug */
+        border: 1px dashed black;
+        min-height: 100px;
+}
+
+/* Minature */
+.minature img {
+    margin-right: 10px;
+    /* debug */
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
+
+.minature-icons {
+    padding: 0 20px;
+}
+
+/* Play Buttons */
+.play {
+    width: 50%;
+
+    /* debug */
+    border: 1px dashed black;
+    min-height: 100px;
+}
+
+.play-bottom,
+.play-top {
+    /* debug */
+    min-height: 50px;
+    border: 1px dashed black;
+}
+
+/* Play Top */
+.play-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Play Bottom */
+.play-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.songbar {
+    width: 50%;
+    height: 2px;
+    border-radius: 3px;
+    /* debug */
+    background-color: black;
+}
+
+/* Volume */
+.volume {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.volumebar {
+    width: 80px;
+    height: 2px;
+    border-radius: 3px;
+    /* debug */
+    background-color: black;
+}
 
 /* Utilities */
 .show {
     display: block;
+}
+
+/*************************/
+/*    MEDIA QUERIES     */
+/***********************/
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .cardrow .card {
+        width: calc((100% - 50px) / 4);
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+/* Large Mobile */
+@media screen and (max-width: 768px) {
+    .cardrow .card {
+        width: calc((100% - 50px) / 2);
+        flex-wrap: wrap;
+    }
+
+    .cardrow {
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .cardrow .card {
+        width: calc((100% - 50px) / 2);
+        flex-wrap: wrap;
+    }
+
+    .cardrow {
+        justify-content: center;
+    }
 }
