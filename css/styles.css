@@ -48,7 +48,6 @@ ul {
 
     /* debug */
     background-color: bisque;
-    z-index: 1;
     border: 1px dashed black;
 }
 
@@ -97,6 +96,7 @@ ul {
 
 .user {
     margin-top: auto;
+    padding: 10px;
     /* debug */
     border: 1px dashed black;
 }
@@ -108,14 +108,13 @@ hr {
 /* MAIN BLOCK */
 .content .header {
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
     /* debug */
     background-color: lightsalmon;
-    min-height: 50px;
     border: 1px dashed black;
 }
 
@@ -299,42 +298,153 @@ hr {
 }
 
 /* Utilities */
-.show {
-    display: block;
+.small-logo {
+    display: none;
 }
 
 /*************************/
 /*    MEDIA QUERIES     */
 /***********************/
-/* Tablet */
+/* Laptop */
 @media screen and (max-width: 1024px) {
     .cardrow .card {
         width: calc((100% - 50px) / 4);
         flex-wrap: wrap;
         justify-content: flex-start;
     }
+
+    .small-logo {
+        display: none;
+    }
+
+    .user {
+        padding: 10px;
+    }
+
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .cardrow .card {
+        width: calc((100% - 50px) / 4);
+        flex-wrap: wrap;
+    }
+
+    .cardrow {
+        justify-content: flex-start;
+    }
+
+    .small-logo {
+        display: none;
+    }
+
+    .user {
+        padding: 10px;
+    }
+
+
 }
 
 /* Large Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 540px) {
+    .content .header {
+        height: 65px;
+    }
+    
     .cardrow .card {
-        width: calc((100% - 50px) / 2);
+        width: calc((100% - 20px) / 2);
         flex-wrap: wrap;
     }
 
     .cardrow {
-        justify-content: center;
+        justify-content: space-around;
+        gap: 20px;
     }
+
+    .nav {
+        width: 150px;
+    }
+
+    .content {
+        width: calc(100% - 150px);
+    }
+
+    .small-logo {
+        display: none;
+    }
+
+
 }
 
 /* Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
+    .content .header {
+        height: 60px;
+    }
+    
+    .nav {
+        width: 40px;
+    }
+
+    .content {
+        width: calc(100% - 40px);
+    }
+
+    .main-logo {
+        padding: 0;
+    }
+
+    .big-logo {
+        display: none;
+    }
+
+    .small-logo {
+        display: block;
+        padding: 3px;
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .install {
+        margin-bottom: 10px;
+    }
+
+    .username {
+        text-align: center;
+    }
+
+    .minature,
+    .volume {
+        width: 35%;
+    }
+
+    .play {
+        width: 30%;
+    }
+
+    .feats-list {
+        padding: 0;
+    }
+    .feats-list li {
+        justify-content: center;
+    }
+
     .cardrow .card {
-        width: calc((100% - 50px) / 2);
+        width: calc((100% - 20px) / 2);
         flex-wrap: wrap;
+        
     }
 
     .cardrow {
-        justify-content: center;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .hidden {
+        display: none;
     }
 }
