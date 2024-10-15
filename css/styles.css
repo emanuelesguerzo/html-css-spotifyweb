@@ -41,9 +41,10 @@ ul {
 /* NAVBAR */
 .nav {
     width: 200px;
-    height: calc(100% - 100px);
+    height: calc(100% - 80px);
     display: flex;
     flex-direction: column;
+
 
 
     /* debug */
@@ -59,7 +60,7 @@ ul {
 
 .feats-list {
     list-style-type: none;
-    padding: 30px 0 20px;
+    padding: 10px 0;
     font-size: 1rem;
 
     /* debug */
@@ -75,7 +76,7 @@ ul {
 }
 
 .playlists {
-    padding: 10px;
+    padding: 0 10px;
     
     /* debug */
     border: 1px dashed black;   
@@ -95,8 +96,8 @@ ul {
 }
 
 .user {
-    margin-top: auto;
     padding: 10px;
+    margin-top: auto;
     /* debug */
     border: 1px dashed black;
 }
@@ -130,7 +131,7 @@ hr {
 
 .content {
     width: calc(100% - 200px);
-    height: calc(100% - 100px);
+    height: calc(100% - 80px);
     overflow: auto;
     
 
@@ -204,7 +205,7 @@ hr {
 /* Playbar */
 .playbar {
     width: 100%;
-    height: 100px;
+    height: 80px;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -226,7 +227,6 @@ hr {
 
         /* debug */
         border: 1px dashed black;
-        min-height: 100px;
 }
 
 /* Minature */
@@ -248,13 +248,12 @@ hr {
 
     /* debug */
     border: 1px dashed black;
-    min-height: 100px;
+    
 }
 
 .play-bottom,
 .play-top {
     /* debug */
-    min-height: 50px;
     border: 1px dashed black;
 }
 
