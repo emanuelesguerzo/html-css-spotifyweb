@@ -245,6 +245,7 @@ h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 0.8rem;
     gap: 25px;
     padding: 100px 0 20px;
     color: var(--main-gray);
@@ -354,7 +355,6 @@ h3 {
 
 .volume,
 .minature {
-    width: 150px;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -362,20 +362,44 @@ h3 {
 
 /* Minature */
 .minature img {
-    margin-right: 10px;
-    /* debug */
-    width: 50px;
-    height: 50px;
-    background-color: blue;
+    width: 35px;
+}
+
+.bywho {
+    margin-left: 5px;
+}
+
+.song-name {
+    color: var(--main-white);
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.song-author {
+    color: var(--main-gray);
+    font-weight: 600;
+    font-size: 0.6rem;
+}
+
+/* Minature Hover */
+.song-author:hover {
+    color: var(--main-white);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .minature-icons {
-    padding: 0 20px;
+    padding-left: 20px;
+    color: var(--main-gray);
+}
+
+.minature-icons i:last-child {
+    padding-left: 10px;
 }
 
 /* Play Buttons */
 .play {
-    width: 50%;
+    height: 100%;
 
     /* debug */
     border: 1px dashed black;
@@ -384,6 +408,7 @@ h3 {
 
 .play-bottom,
 .play-top {
+    height: 50%;
     /* debug */
     border: 1px dashed black;
 }
@@ -522,6 +547,10 @@ h3 {
         width: calc(100% - 150px);
     }
 
+    .minature-icons i:last-child {
+        padding-left: 0;
+    }
+
     .small-logo {
         display: none;
     }
@@ -583,6 +612,10 @@ h3 {
     .minature,
     .volume {
         width: 35%;
+    }
+
+    .minature-icons i:last-child {
+        padding-left: 0;
     }
 
     .play {
