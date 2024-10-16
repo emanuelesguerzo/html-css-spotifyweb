@@ -3,6 +3,7 @@
     --main-black: #000000;
     --main-white: #ffffff;
     --main-gray: #6f7276;
+    --main-green: #adff2f;
     --bg-color: #141922;
     --playbar: #282828;
 }
@@ -67,21 +68,35 @@ html {
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 5px 0 10px;
+    padding-bottom: 10px;
+}
+
+.feats-list li:not(:first-child) {
+    padding-left: 3px;
 }
 
 .feats-list li:first-child {
     color: var(--main-white);
 }
 
+.feats-list .nav-active {
+    border-left: 3px solid var(--main-green);
+}
+
 .feats-list li img {
-    width: 40px;
+    width: 35px;
     padding-left: 10px;
+}
+
+/* Feats List Hover */
+.feats-list li:hover {
+    color: var(--main-white);
+    cursor: pointer;
 }
 
 /* Playlists */
 .playlists {
-    padding-left: 10px;
+    padding-left: 13px;
 }
 
 .playlists h2 {
@@ -115,11 +130,23 @@ html {
     padding-bottom: 15px;
 }
 
-/* User Section */
-.user {
-    padding: 10px;
+/* Playlists Hover */
+.new-playlist:hover .add-playlist {
+    background-color: var(--main-white);
+    border: 1px solid var(--main-white);
+    cursor: pointer;
 }
 
+.new-playlist:hover .playlist-text {
+    color: var(--main-white);
+    cursor: pointer;
+}
+
+.playlist-list li:hover {
+    color: var(--main-white);
+}
+
+/* User Section */
 .username,
 .install {
     display: flex;
@@ -147,6 +174,12 @@ html {
 
 hr {
     margin: 10px 0;
+}
+
+/* User Section Hover */
+.install span:hover {
+    color: var(--main-white);
+    cursor: pointer;
 }
 
 /* MAIN BLOCK */
@@ -195,6 +228,13 @@ h3 {
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+/* Header Hover */
+.header .upgrade:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* Categories */
@@ -205,6 +245,28 @@ h3 {
     gap: 25px;
     padding: 100px 0 20px;
     color: var(--main-gray);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.categories-list li a.active {
+    position: relative;
+}
+
+.categories-list li a.active:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 40%;
+    height: 2px;
+    background-color: var(--main-green);
+    transform: translate(-50%, -50%);
+}
+
+/* Categories List Hover */
+.categories-list li:hover {
+    color: var(--main-white);
 }
 
 /* Card Top */
