@@ -270,8 +270,38 @@ h3 {
 }
 
 /* Card Top */
-.card-top img {
+.card-overlay {
+    position: relative;
+}
+
+.card-overlay img {
     padding-bottom: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.playsong {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--main-white);
+    font-size: 3rem;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Overlay Hover */
+.card:hover,
+.card-overlay:hover,
+.playsong:hover {
+    cursor: pointer;
+}
+.card:hover img {
+    opacity: 0.5;
+}
+
+.card:hover .playsong {
+    opacity: 1; 
 }
 
 /* Card Bottom */
