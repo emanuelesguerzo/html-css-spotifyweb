@@ -45,57 +45,104 @@ html {
     height: calc(100% - 75px);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: var(--main-black);
     color: var(--main-gray);
+    font-weight: 600;
+    font-size: 0.8rem;
 }
 
+/* Logo */
 .main-logo {
     padding: 10px;
-    /* debug */
-    border: 1px dashed black;
 }
 
+/* Feats List */
 .feats-list {
     list-style-type: none;
-    padding: 10px 0;
-    font-size: 1rem;
-
-    /* debug */
-    border: 1px dashed black;   
+    margin-bottom: 10px;
 }
 
 .feats-list li {
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 5px 0;
+    padding: 5px 0 10px;
 }
 
+.feats-list li:first-child {
+    color: var(--main-white);
+}
+
+.feats-list li img {
+    width: 40px;
+    padding-left: 10px;
+}
+
+/* Playlists */
 .playlists {
-    padding: 0 10px;
-    
-    /* debug */
-    border: 1px dashed black;   
+    padding-left: 10px;
+}
+
+.playlists h2 {
+    color: var(--main-white);
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
 .new-playlist {
-    padding: 10px 0;
+    padding: 10px 0 20px;
+    display: flex;
+    align-items: center;
+    
 }
 
-.new-playlist button {
+.add-playlist {
     height: 30px;
     width: 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 1px solid var(--main-gray);
+    background-color: var(--main-gray);
+    color: var(--main-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
 }
 
-.playlist-list li {
-    padding-bottom: 10px;
+.playlist-list li:not(:last-child) {
+    padding-bottom: 15px;
 }
 
+/* User Section */
 .user {
     padding: 10px;
-    margin-top: auto;
-    /* debug */
-    border: 1px dashed black;
+}
+
+.username,
+.install {
+    display: flex;
+    align-items: center;
+}
+
+.install img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+.username span {
+    color: var(--main-white);
+    font-weight: 800;
+}
+
+.username img {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--main-gray);
+    background-color: var(--main-gray);
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 hr {
@@ -182,7 +229,6 @@ h3 {
     font-weight: 600;
 }
 
-
 .recent {
     padding: 20px;
 }
@@ -206,22 +252,17 @@ h3 {
     left: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: var(--playbar);
 
-    /* debug */
-    background-color: blueviolet;
-    border: 1px dashed black;
 }
 
 .volume,
 .minature {
-    width: 25%;
+    width: 150px;
     display: flex;
     align-items: center;
     padding: 10px;
-
-
-        /* debug */
-        border: 1px dashed black;
 }
 
 /* Minature */
@@ -304,6 +345,7 @@ h3 {
     html {
         font-size: 17px;
     }
+
     .cardrow .card {
         width: calc((100% - 50px) / 4);
         flex-wrap: wrap;
@@ -329,7 +371,7 @@ h3 {
         width: calc((100% - 50px) / 4);
         flex-wrap: wrap;
     }
-
+    
     .cardrow {
         justify-content: flex-start;
     }
@@ -338,11 +380,14 @@ h3 {
         display: none;
     }
 
+    .add-playlist {
+        height: 25px;
+        width: 25px;
+    }
+
     .user {
         padding: 10px;
     }
-
-
 }
 
 /* Large Mobile */
@@ -371,6 +416,11 @@ h3 {
 
     .nav {
         width: 150px;
+    }
+
+    .add-playlist {
+        height: 25px;
+        width: 25px;
     }
 
     .content {
@@ -423,15 +473,16 @@ h3 {
     .user {
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
 
     .install {
         margin-bottom: 10px;
+        display: block;
     }
 
-    .username {
-        text-align: center;
+    .username img {
+        width: 20px;
+        height: 20px;
     }
 
     .minature,
@@ -446,6 +497,12 @@ h3 {
     .feats-list {
         padding: 0;
     }
+
+    .feats-list li img {
+        padding: 0;
+        width: 25px;
+    }
+
     .feats-list li {
         justify-content: center;
     }
