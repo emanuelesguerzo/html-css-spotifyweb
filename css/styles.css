@@ -2,6 +2,7 @@
 :root {
     --main-black: #000000;
     --main-white: #ffffff;
+    --main-gray: #6f7276;
     --bg-color: #141922;
     --playbar: #282828;
 }
@@ -50,7 +51,7 @@ html {
     display: flex;
     flex-direction: column;
     background-color: var(--main-black);
-    color: var(--main-white);
+    color: var(--main-gray);
 }
 
 .main-logo {
@@ -135,6 +136,7 @@ hr {
     height: calc(100% - 75px);
     overflow: auto;
     background-color: var(--bg-color);
+    color: var(--main-white);
 }
 
 /* Categories */
@@ -144,13 +146,8 @@ hr {
     flex-wrap: wrap;
     gap: 25px;
     padding: 100px 0 20px;
-    /* debug */
-    border: 1px dashed black;
-}
+    color: var(--main-gray);
 
-.categories li {
-    /* debug */
-    border: 1px dashed black;
 }
 
 /* Recently Played */
@@ -170,9 +167,6 @@ hr {
 .cardrow .card {
     width: calc((100% - 50px) / 6);
     flex-wrap: wrap;
-    /* debug */
-    background-color: azure;
-    border: 1px dashed black;
 }
 
 .card-bottom {
