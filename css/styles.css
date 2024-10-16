@@ -147,6 +147,9 @@ html {
 }
 
 /* User Section */
+.user {
+    padding: 13px;
+}
 .username,
 .install {
     display: flex;
@@ -597,6 +600,11 @@ h3 {
 
     .feats-list li {
         justify-content: center;
+    }
+
+    .feats-list .nav-active {
+        border: none;
+        padding-top: 5px;
     }
 
     .cardrow .card {
