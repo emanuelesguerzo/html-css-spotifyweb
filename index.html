@@ -10,8 +10,8 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- /Google Fonts -->
 
 
@@ -24,13 +24,15 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <!-- /Favicon -->
-
 </head>
+
 <body>
 
-    <main class="">
+    <main class="main">
 
+        <!-- WRAPPER -->
         <div class="row-big wrapper">
+
             <!-- Nav Bar -->
             <nav class="nav">
 
@@ -42,7 +44,7 @@
                         <img class="big-logo" src="./img/logo.svg" alt="">
                         <img class="small-logo" src="./img/logo-small.svg" alt="">
                     </div>
-                    <!-- Main Logo -->
+                    <!-- /Main Logo -->
 
                     <!-- Feats List -->
                     <ul class="feats-list">
@@ -65,7 +67,7 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- Feats List -->
+                    <!-- /Feats List -->
 
                     <!-- Playlists Section -->
                     <div class="playlists hidden">
@@ -77,17 +79,31 @@
                         </div>
                         <!-- /New Playlist Button -->
 
-                        <!-- Playlists List -->
+                        <!-- Playlist List -->
                         <ul class="playlist-list">
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
                         </ul>
-                        <!-- /Playlists List -->
+                        <!-- /Playlist List -->
 
                     </div>
                     <!-- /Playlists Section -->
@@ -130,12 +146,24 @@
                 <!-- Categories -->
                 <div class="categories">
                     <ul class="categories-list">
-                        <li><a class="active" href="#">In Evidenza</a></li>
-                        <li><a href="#">Podcast</a></li>
-                        <li><a href="#">Classifiche</a></li>
-                        <li><a href="#">Generi e Mood</a></li>
-                        <li><a href="#">Nuove Uscite</a></li>
-                        <li><a href="#">Scopri</a></li>
+                        <li>
+                            <a class="active" href="#">In Evidenza</a>
+                        </li>
+                        <li>
+                            <a href="#">Podcast</a>
+                        </li>
+                        <li>
+                            <a href="#">Classifiche</a>
+                        </li>
+                        <li>
+                            <a href="#">Generi e Mood</a>
+                        </li>
+                        <li>
+                            <a href="#">Nuove Uscite</a>
+                        </li>
+                        <li>
+                            <a href="#">Scopri</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /Categories -->
@@ -301,7 +329,7 @@
                 <!-- For You -->
                 <div class="foryou">
                     <h3>Creato per John Doe</h3>
-                    <span class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</span>
+                    <div class="main-subtitle">Più ascolti, più accurati saranno i suggerimenti.</div>
 
                     <!-- Row -->
                     <div class="cardrow">
@@ -362,7 +390,7 @@
                 <!-- Popular -->
                 <div class="popular">
                     <h3>Artisti più popolari</h3>
-                    <span class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</span>
+                    <div class="main-subtitle">Più ascolti, più accurati saranno i suggerimenti.</div>
 
                     <!-- Row -->
                     <div class="cardrow">
@@ -427,9 +455,10 @@
             <!-- Playbar -->
             <div class="playbar">
 
+                <!-- Left Playbar -->
                 <div class="minature">
                     <div class="minature-img">
-                        <a href="#"><img src="./img/player_left.jpg" alt="Current Song"></a>
+                        <img src="./img/player_left.jpg" alt="Current Song">
                     </div>
                     <div class="bywho">
                         <div class="song-name">Hilltop Hoods</div>
@@ -440,10 +469,12 @@
                         <i class="fa-regular fa-folder"></i>
                     </div>
                 </div>
+                <!-- /Left Playbar -->
 
+                <!-- Center Playbar -->
                 <div class="play">
 
-                    <!-- Play Top -->
+                    <!-- Top -->
                     <div class="play-top">
                         <ul class="player-top">
 
@@ -456,15 +487,15 @@
                                     <i class="fa-solid fa-backward-step"></i>
                                 </a>
                             </li>
-                            <!-- Backward -->
+                            <!-- /Backward -->
 
-                            <!-- Play -->
+                            <!-- Play Button -->
                             <li>
                                 <a class="play-button" href="#">
                                     <i class="fa-regular fa-circle-play"></i>
                                 </a>
                             </li>
-                            <!-- Play -->
+                            <!-- /Play Button -->
 
                             <!-- Forward -->
                             <li class="forward">
@@ -475,13 +506,13 @@
                                     <i class="fa-solid fa-rotate-right"></i>
                                 </a>                
                             </li>
-                            <!-- Forward -->
+                            <!-- /Forward -->
 
                         </ul>
                     </div>
-                    <!-- /Play Top -->
+                    <!-- /Top -->
 
-                    <!-- Play Bottom -->
+                    <!-- Bottom -->
                     <div class="play-bottom">
                         <div class="playtime">0:25</div>
                         <div class="songbar">
@@ -489,11 +520,12 @@
                         </div>
                         <div class="playtime">4:35</div>
                     </div>
-                    <!-- /Play Bottom -->
+                    <!-- /Bottom -->
 
                 </div>
+                <!-- /Center Playbar -->
 
-                <!-- Volume -->
+                <!-- Right Playbar -->
                 <div class="volume">
                     <div>
                         <a href="">
@@ -515,13 +547,13 @@
                     </div>
 
                 </div>
-                <!-- /Volume -->
-
+                <!-- /Right Playbar -->
 
             </div>
             <!-- /Playbar -->
+
         </div>
-        
+        <!-- /WRAPPER -->
 
     </main>
     

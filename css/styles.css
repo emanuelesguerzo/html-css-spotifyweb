@@ -32,6 +32,7 @@ ul {
 html {
     font-size: 18px;
 }
+
 /* COMMON */
 /* Layout */
 .wrapper {
@@ -63,6 +64,7 @@ html {
 .feats-list {
     list-style-type: none;
     margin-bottom: 10px;
+    font-size: 0.6rem;
 }
 
 .feats-list li a {
@@ -99,24 +101,25 @@ html {
 /* Playlists */
 .playlists {
     padding-left: 13px;
+    font-size: 0.6rem;
 }
 
 .playlists h2 {
     color: var(--main-white);
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .new-playlist {
-    padding: 10px 0 20px;
+    padding: 10px 0 15px;
     display: flex;
     align-items: center;
 }
 
 .add-playlist {
-    height: 45px;
-    width: 45px;
-    font-size: 2rem;
+    height: 35px;
+    width: 35px;
+    font-size: 40px;
     font-weight: 600;
     border: 1px solid var(--main-gray);
     background-color: var(--main-gray);
@@ -128,7 +131,7 @@ html {
 }
 
 .playlist-list li:not(:last-child) {
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }
 
 /* Playlists Hover */
@@ -149,7 +152,8 @@ html {
 
 /* User Section */
 .user {
-    padding: 13px;
+    padding: 10px;
+    font-size: 0.7rem;
 }
 
 .username,
@@ -218,7 +222,7 @@ hr {
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Header Hover */
@@ -232,9 +236,9 @@ hr {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     gap: 25px;
-    padding: 100px 0 20px;
+    padding: 100px 18px 20px;
     color: var(--main-gray);
     text-transform: uppercase;
     font-weight: 700;
@@ -249,7 +253,7 @@ hr {
     position: absolute;
     bottom: -5px;
     left: 50%;
-    width: 30%;
+    width: 35%;
     height: 2px;
     background-color: var(--main-green);
     transform: translate(-50%, -50%);
@@ -261,10 +265,14 @@ hr {
 }
 
 /* Cards */
+h3 {
+    font-size: 1rem;
+    padding-bottom: 15px;
+}
+
 .cardrow {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 20px; 
     gap: 10px; 
 }
 
@@ -317,23 +325,29 @@ hr {
 .card-bottom h4 {
     padding-bottom: 5px;
     font-weight: 800;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
+.main-subtitle,
 .subtitle {
     color: var(--main-gray);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 600;
-}
-
-.recent {
-    padding: 20px;
 }
 
 .recent,
 .foryou,
 .popular {
-    padding: 20px;
+    padding: 10px 20px;
+}
+
+.popular h3,
+.foryou h3 {
+    padding-bottom: 5px;
+}
+
+.main-subtitle {
+    padding-bottom: 20px;
 }
 
 .popular img {
@@ -352,13 +366,13 @@ hr {
     align-items: center;
     justify-content: space-between;
     background-color: var(--playbar);
+    padding: 0 10px;
 }
 
 .volume,
 .minature {
     display: flex;
     align-items: center;
-    padding: 10px;
 }
 
 .play {
@@ -366,34 +380,37 @@ hr {
 }
 
 /* Minature */
-.minature img {
+.minature-img {
     min-width: 30px;
-    max-width: 30px;
+    max-width: 40px;
 }
 
-.bywho {
-    margin-left: 10px;
+.song-name,
+.song-author {
+    padding: 0 5px;
 }
 
 .song-name {
     color: var(--main-white);
     font-weight: 700;
     font-size: 0.7rem;
+    text-wrap: wrap;
 }
 
 .song-author {
     color: var(--main-gray);
     font-weight: 600;
     font-size: 0.6rem;
+    text-wrap: wrap;
 }
 
 .minature-icons {
     display: flex;
     flex-wrap: wrap;
     font-size: 0.8rem;
-    gap: 8px;
-    padding-left: 10px;
+    padding: 0 5px;
     color: var(--main-gray);
+    gap: 10px;
 }
 
 /* Minature Hover */
@@ -408,7 +425,7 @@ hr {
     cursor: pointer;
 }
 
-/* Play Top */
+/* Player Top */
 .play-top {
     display: flex;
     justify-content: center;
@@ -425,7 +442,7 @@ hr {
 }
 
 .play-button {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     transition: transform 0.3;
 }
 
@@ -440,7 +457,7 @@ hr {
     transform: scale(1.2);
 }
 
-/* Play Bottom */
+/* Player Bottom */
 .play-bottom {
     display: flex;
     flex-direction: row;
@@ -457,7 +474,7 @@ hr {
 
 .songbar {
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 3px;
     border-radius: 3px;
     background-color: var(--main-gray);
@@ -479,8 +496,8 @@ hr {
     content: "";
     border: 1px solid var(--main-gray);
     background-color: var(--main-white);
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     opacity: 0;
     transition: opacity;
@@ -503,6 +520,7 @@ hr {
     gap: 10px;
     font-size: 0.7rem;
     color: var(--main-white);
+    padding-left: 10px;
 }
 
 .volumebar {
@@ -566,7 +584,6 @@ hr {
     .cardrow .card {
         width: calc((100% - 50px) / 4);
         flex-wrap: wrap;
-        justify-content: flex-start;
     }
 
     /* NAVBAR */
@@ -574,15 +591,10 @@ hr {
     .small-logo {
         display: none;
     }
-
-    /* User Section */
-    .user {
-        padding: 10px;
-    }
 }
 
 /* Tablet */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 878px) {
     html {
         font-size: 16px;
     }
@@ -593,25 +605,27 @@ hr {
         width: calc((100% - 50px) / 4);
         flex-wrap: wrap;
     }
-    
-    .cardrow {
-        justify-content: flex-start;
-    }
 
     /* NAVBAR */
     /* Logo */
     .small-logo {
         display: none;
     }
-    
-    /* User Section */
-    .user {
-        padding: 10px;
+
+    /* PLAYBAR */
+    /* Left */
+    .song-name {
+        font-size: 0.6rem;
     }
+
+    .song-author {
+        font-size: 0.5rem;
+    }
+
 }
 
 /* Large Mobile */
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 639px) {
     html {
         font-size: 15px;
     }
@@ -641,18 +655,41 @@ hr {
 
     /* PLAYBAR */
     /* Left */
-    .minature-icons i:last-child {
-        padding-left: 0;
-    }
-   
     .minature-icons {
-        gap: 5px;
+        gap: 3px;
     }
 
+    .song-name {
+        font-size: 0.6rem;
+    }
+
+    .song-author {
+        font-size: 0.5rem;
+    }
+
+    /* Center */
+    .white-bar::after {
+        width: 6px;
+        height: 6px;
+    }
+
+    /* Right */
+    .volumebar {
+        width: 45px;
+    }
+
+    .volume-level {
+        width: 30%;
+    }
+
+    .volume-level::after {
+        width: 6px;
+        height: 6px;
+    }
 }
 
 /* Mobile */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 520px) {
     html {
         font-size: 14px;
     }
@@ -664,17 +701,11 @@ hr {
     /* MAIN */
     /* Header */
     .content .header {
-        height: 60px;
         width: calc(100% - 40px);
     }
 
     .header .upgrade {
         font-size: 0.6rem;
-    }
-
-    /* Categories */
-    .categories ul {
-        padding-top: 80px;
     }
 
     /* Cards */
@@ -704,17 +735,13 @@ hr {
 
     .small-logo {
         display: block;
-        padding: 3px;
+        padding: 8px 8px 12px 8px;
     }
 
     /* Feats */
-    .feats-list {
-        padding: 0;
-    }
-
     .feats-list li img {
         padding: 0;
-        width: 25px;
+        width: 20px;
     }
 
     .feats-list li a {
@@ -723,37 +750,56 @@ hr {
 
     .feats-list .nav-active {
         border: none;
-        padding-top: 5px;
     }
 
     /* User Section */
-    .user {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .install {
         margin-bottom: 10px;
+        padding-left: 1px;
         display: block;
     }
 
     .username img {
+        margin-right: 0;
         width: 20px;
         height: 20px;
     }
 
     /* PLAYBAR */
+    .playbar {
+        padding: 0 5px;
+    }
+    
     /* Left */
-    .minature-icons {
-        gap: 5px;
+    .song-name {
+        font-size: 0.6rem;
     }
 
+    .song-author {
+        font-size: 0.5rem;
+    }
+
+    .minature-icons {
+        gap: 3px;
+    }
 
     /* Center */
     .white-bar::after {
         width: 6px;
         height: 6px;
+    }
+
+    .player-top {
+        gap: 12px;
+    }
+
+    .play-button {
+        transition: transform 0.3;
+    }
+
+    .forward,
+    .backward {
+        gap: 8px;
     }
 
     /* Right */
