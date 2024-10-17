@@ -367,7 +367,8 @@ hr {
 
 /* Minature */
 .minature img {
-    width: 35px;
+    min-width: 30px;
+    max-width: 30px;
 }
 
 .bywho {
@@ -389,8 +390,9 @@ hr {
 .minature-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-    padding-left: 20px;
+    font-size: 0.8rem;
+    gap: 8px;
+    padding-left: 10px;
     color: var(--main-gray);
 }
 
@@ -406,7 +408,6 @@ hr {
     cursor: pointer;
 }
 
-
 /* Play Top */
 .play-top {
     display: flex;
@@ -417,13 +418,14 @@ hr {
 
 .player-top {
     display: flex;
+    font-size: 1rem;
     gap: 20px;
     align-items: center;
     color: var(--main-white);
 }
 
 .play-button {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     transition: transform 0.3;
 }
 
@@ -459,7 +461,6 @@ hr {
     height: 3px;
     border-radius: 3px;
     background-color: var(--main-gray);
-    z-index: 1;
     cursor: pointer;
 }
 
@@ -500,14 +501,50 @@ hr {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+    font-size: 0.7rem;
+    color: var(--main-white);
 }
 
 .volumebar {
+    position: relative;
     width: 80px;
-    height: 2px;
+    height: 3px;
     border-radius: 3px;
-    /* debug */
-    background-color: black;
+    background-color: var(--main-gray);
+    cursor: pointer;
+}
+
+.volume-level {
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--main-white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.volume-level::after {
+    content: "";
+    border: 1px solid var(--main-gray);
+    background-color: var(--main-white);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity;
+}
+
+/* Songbar Hover */
+.volumebar:hover .volume-level {
+    background-color: #adff2f;
+    cursor: pointer;
+}
+
+.volumebar:hover .volume-level::after {
+    opacity: 1;
 }
 
 /* Utilities */
@@ -607,6 +644,11 @@ hr {
     .minature-icons i:last-child {
         padding-left: 0;
     }
+   
+    .minature-icons {
+        gap: 5px;
+    }
+
 }
 
 /* Mobile */
@@ -703,20 +745,37 @@ hr {
 
     /* PLAYBAR */
     /* Left */
-    .minature,
-    .volume {
-        width: 35%;
+    .minature-icons {
+        gap: 5px;
     }
 
-    .minature-icons i:last-child {
-        padding-left: 0;
-    }
 
     /* Center */
-    .play {
+    .white-bar::after {
+        width: 6px;
+        height: 6px;
+    }
+
+    /* Right */
+    .volume {
+        gap: 5px;
+        font-size: 0.6rem;
+    }
+
+    .volumebar {
+        width: 45px;
+    }
+
+    .volume-level {
         width: 30%;
     }
 
+    .volume-level::after {
+        width: 6px;
+        height: 6px;
+    }
+
+    /* Utilities */
     .hidden {
         display: none;
     }
