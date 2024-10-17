@@ -32,7 +32,7 @@
 
         <div class="row-big wrapper">
             <!-- Nav Bar -->
-            <div class="nav">
+            <nav class="nav">
 
                 <!-- Main Features -->
                 <div class="main-feats">
@@ -46,9 +46,24 @@
 
                     <!-- Feats List -->
                     <ul class="feats-list">
-                        <li><img class="nav-active" src="./img/home.svg" alt="Home Icon"><span class="hidden"> Home</span></li>
-                        <li><img src="./img/search.svg" alt="Search Icon"><span class="hidden"> Cerca</span></li>
-                        <li><img src="./img/libreria.svg" alt="Library Icon"><span class="hidden"> La tua libreria</span></li>
+                        <li>
+                            <a href="#">
+                                <img class="nav-active" src="./img/home.svg" alt="Home Icon">
+                                <span class="active hidden"> Home</span>
+                            </a>    
+                        </li>
+                        <li>
+                            <a class="unactive" href="#">
+                                <img src="./img/search.svg" alt="Search Icon">
+                                <span class="hidden"> Cerca</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="unactive" href="#">
+                                <img src="./img/libreria.svg" alt="Library Icon">
+                                <span class="hidden"> La tua libreria</span>
+                            </a>
+                        </li>
                     </ul>
                     <!-- Feats List -->
 
@@ -82,21 +97,25 @@
 
                 <!-- User Section -->
                 <div class="user">
-                    <div class="install">
+
+                    <!-- Install -->
+                    <a class="install">
                         <img src="./img/download.svg" alt=""><span class="hidden">Installa app</span>
-                    </div>
+                    </a>
+                    <!-- /Install -->
 
                     <hr class="hidden">
 
+                    <!-- Username -->
                     <div class="username">
                         <img src="./img/profile.svg" alt=""><span class="hidden">John Doe</span>
                     </div>
+                    <!-- /Username -->
 
                 </div>
                 <!-- /User Section -->
 
-
-            </div>
+            </nav>
             <!-- /Nav Bar -->
 
             <!-- Content Block -->
@@ -130,7 +149,7 @@
                     <div class="cardrow">
 
                         <!-- Card -->
-                        <div class="card">
+                        <div href="" class="card">
 
                             <!-- Card Top -->
                             <div class="card-top">
@@ -410,7 +429,7 @@
 
                 <div class="minature">
                     <div class="minature-img">
-                        <img src="./img/player_left.jpg" alt="Current Song">
+                        <a href="#"><img src="./img/player_left.jpg" alt="Current Song"></a>
                     </div>
                     <div class="bywho">
                         <div class="song-name">Hilltop Hoods</div>
@@ -426,22 +445,32 @@
 
                     <!-- Play Top -->
                     <div class="play-top">
-                        Playbuttons
+                        <ul class="player-top">
+                            <li><a href="#"><i class="fa-solid fa-shuffle"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-backward-step"></i></a></li>
+                            <li><a class="play-button" href="#"><i class="fa-regular fa-circle-play"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-forward-step"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-rotate-right"></i></a></li>
+                        </ul>
                     </div>
                     <!-- /Play Top -->
 
                     <!-- Play Bottom -->
                     <div class="play-bottom">
-                        <span class="playtime">2.39</span><div class="songbar"></div><span class="playtime">4.38</span>
+                        <div class="playtime">0:25</div>
+                        <div class="songbar">
+                            <div class="white-bar"></div>
+                        </div>
+                        <div class="playtime">4:35</div>
                     </div>
                     <!-- /Play Bottom -->
 
                 </div>
 
                 <div class="volume">
-                    <button>&hearts;</button>
-                    <button>&hearts;</button>
-                    <button>&hearts;</button>
+                    <div><a href=""><i class="fa-solid fa-list-ul"></i></a></div>
+                    <div><a href=""><i class="fa-solid fa-display"></i></a></div>
+                    <div><a href=""><i class="fa-solid fa-volume-high"></i></a></div>
                     <div class="volumebar"></div>
 
 
