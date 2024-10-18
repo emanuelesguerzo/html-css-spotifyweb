@@ -83,7 +83,7 @@ html {
     padding-left: 3px;
 }
 
-.unactive {
+.inactive {
     padding-left: 3px;
 }
 
@@ -244,6 +244,7 @@ hr {
     font-weight: 700;
 }
 
+/* Categories Decoration */
 .categories-list li a.active {
     position: relative;
 }
@@ -264,7 +265,7 @@ hr {
     color: var(--main-white);
 }
 
-/* Cards */
+/* CARDS */
 h3 {
     font-size: 1rem;
     padding-bottom: 15px;
@@ -354,7 +355,7 @@ h3 {
     border-radius: 50%;
 }
 
-/* Playbar */
+/* PLAYBAR */
 .playbar {
     width: 100%;
     height: 75px;
@@ -379,6 +380,7 @@ h3 {
     width: 60%;
 }
 
+/* Left */
 /* Minature */
 .minature-img {
     min-width: 30px;
@@ -425,6 +427,7 @@ h3 {
     cursor: pointer;
 }
 
+/* Center */
 /* Player Top */
 .play-top {
     display: flex;
@@ -541,7 +544,6 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
 }
 
 .volume-level::after {
@@ -622,6 +624,9 @@ h3 {
         font-size: 0.5rem;
     }
 
+    .minature-icons {
+        gap: 3px;
+    }
 }
 
 /* Large Mobile */
@@ -636,7 +641,7 @@ h3 {
         font-size: 0.6rem;
     }
 
-    /* Cards */
+    /* CARDS */
       .cardrow .card {
         width: calc((100% - 20px) / 2);
         flex-wrap: wrap;
@@ -714,7 +719,7 @@ h3 {
         flex-wrap: wrap;
     }
 
-    .cardrow {
+    .cardrow { 
         justify-content: space-around;
         gap: 20px;
     }
@@ -791,10 +796,6 @@ h3 {
 
     .player-top {
         gap: 12px;
-    }
-
-    .play-button {
-        transition: transform 0.3;
     }
 
     .forward,
